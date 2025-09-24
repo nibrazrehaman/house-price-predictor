@@ -36,13 +36,14 @@ jobs:
           mlflow server --host 0.0.0.0 \
            --backend-store-uri sqlite://mlflow.db \
            --default-artifact-root /tmp/mlruns
-
+          sleep 60
       - name: Feature Engineering
         run: |
           python src/features/engineer.py   \
             --input data/processed/cleaned_house_data.csv \
             --output data/processed/featured_house_data.csv  \
             --preprocessor models/trained/preprocessor.pkl
+          
 
       - name: Train the model
         run: |
