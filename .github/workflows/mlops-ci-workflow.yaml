@@ -55,7 +55,7 @@ jobs:
 
       - name: Mlflow clean up 
         run: |
-
+          docker ps
           docker stop mlflow 
           docker rm mlflow
-          docker rm mlflow ghcr.io/mlflow/mlflow:latest
+          docker rmi mlflow ghcr.io/mlflow/mlflow:latest
