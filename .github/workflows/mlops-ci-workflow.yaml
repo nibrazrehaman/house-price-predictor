@@ -58,4 +58,4 @@ jobs:
           docker ps
           docker stop mlflow 
           docker rm mlflow
-          docker rmi mlflow ghcr.io/mlflow/mlflow:latest
+          docker rmi ghcr.io/mlflow/mlflow:latest
